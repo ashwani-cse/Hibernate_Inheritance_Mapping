@@ -28,7 +28,7 @@ SELECT user FROM mysql. user
     create table st_person (dtype varchar(31) not null, id integer not null, name varchar(255), salary float(53), course varchar(255), primary key (id)) engine=InnoDB
    ```
    - To customize the discriminator column, we can use the @DiscriminatorColumn annotation. Note here, We can use @DiscriminatorColumn annotation without using @Inheritance annotation as we know it is default strategy
-   - - ``` 
+   - - ```Java
        @Entity(name="tableName")
        @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
        @DiscriminatorColumn(name="column_type",
@@ -36,14 +36,13 @@ SELECT user FROM mysql. user
        public class ParentClass {
        // ...
        }
-   - - Child classes be like
-   - - ```
+
        @Entity
        @DiscriminatorValue("1")
        public class Child1 extends ParentClass {
        // ...
        }
-   - - ```
+
        @Entity
        @DiscriminatorValue("2")
        public class Child2 extends ParentClass {
@@ -53,20 +52,19 @@ SELECT user FROM mysql. user
 3. **Joined Table:**
    - This strategy creates one table for every class including parent class.
    - Primary key of parent table is used as foreign key in tables of subclasses.
-   - - ``` 
+   - - ```Java 
        @Entity(name="tableName")
        @Inheritance(strategy = InheritanceType.JOINED)
        public class ParentClass {
        // ...
        }
-   - - Child classes be like
-   - - ```
+
        @Entity
        @PrimaryKeyJoinColumn(name = "child1_id")
        public class Child1 extends ParentClass {
        // ...
        }
-   - - ```
+
        @Entity
        @PrimaryKeyJoinColumn(name = "child2_id")
        public class Child2 extends ParentClass {
