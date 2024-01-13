@@ -1,0 +1,12 @@
+
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://localhost:3306/inheritance_strategies_demo
+    username: 'inheritance_strategies_demo_user'
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
