@@ -1,10 +1,7 @@
 # JPA Inheritance Strategies
 
-This repository contains a jpa project named **jpa-inheritance-strategies** that demonstrate the different types inheritance strategies in JPA/Hibernate.
+This repository contains a SpringBoot jpa project named **jpa-inheritance-strategies** that demonstrate the different types of inheritance strategies in JPA/Hibernate.
 
-## Overview
-
-The project consists of a Spring Boot application with the following components:
 ## Queries
 ```mysql
 show databases ;
@@ -18,7 +15,23 @@ SELECT user FROM mysql. user
    - Class annotated with @MappedSuperclass no longer need @Entity Annotation.
    - It won’t be persisted in the database by itself.
    - Provide Getter Setter Of the Super class, so that Child can access inherited fields.
-2. **Single Table:**
+   - - ```Java
+       @MappedSuperclass
+       public class ParentClass {
+       //...
+       }
+
+       @Entity
+       public class Child1 extends ParentClass {
+       // ...
+       }
+
+       @Entity
+       public class Child2 extends ParentClass {
+       // ...
+       }
+       ```
+3. **Single Table:**
    - This strategy creates only one table for a class hierarchy.
    - JPA also chooses this strategy by default if we don’t specify one explicitly.
    - Use annotation @Inheritance for inheritanceType to the superclass.
