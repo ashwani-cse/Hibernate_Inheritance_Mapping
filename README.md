@@ -1,6 +1,6 @@
 # JPA Strategies
 
-This repository contains a SpringBoot jpa project named **jpa-inheritance-strategies** that demonstrate the different types of inheritance strategies in JPA/Hibernate.
+This repository contains a SpringBoot jpa project named **jpa-hibernate-strategies** that demonstrate the different types of strategies in JPA/Hibernate.
 
 ## Queries
 ```mysql
