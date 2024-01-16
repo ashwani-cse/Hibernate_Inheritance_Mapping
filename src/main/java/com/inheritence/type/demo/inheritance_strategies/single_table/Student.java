@@ -1,4 +1,4 @@
-package com.inheritence.type.demo.single_table;
+package com.inheritence.type.demo.inheritance_strategies.single_table;
 
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;

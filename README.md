@@ -1,4 +1,4 @@
-# JPA Inheritance Strategies
+# JPA Strategies
 
 This repository contains a SpringBoot jpa project named **jpa-inheritance-strategies** that demonstrate the different types of inheritance strategies in JPA/Hibernate.
 
@@ -10,7 +10,7 @@ CREATE USER inheritance_strategies_demo_user;
 GRANT ALL PRIVILEGES ON inheritance_strategies_demo.* TO 'inheritance_strategies_demo_user';
 SELECT user FROM mysql. user
 ```
-## Strategies implemented
+## Inheritance Strategies implemented
 1. **MappedSuperclass:**
    - Class annotated with @MappedSuperclass no longer need @Entity Annotation.
    - It won’t be persisted in the database by itself.
@@ -114,6 +114,18 @@ SELECT user FROM mysql. user
    Hibernate: create table tpc_person (id integer not null, name varchar(255), primary key (id)) engine=InnoDB
    Hibernate: create table tpc_student (id integer not null, course varchar(255), name varchar(255), primary key (id)) engine=InnoDB
   ```
+## JPA FetchTypes
+
+1. FetchType.LAZY
+2. FetchType.EAGER
+#### Syntax:
+```java
+   @ManyToOne(fetch = FetchType.LAZY / EAGER)
+    public class ParentClass {
+    // ...
+    }
+```
+   
 
 ## Social Profile
 - [LinkedIn](https://www.linkedin.com/in/ashwanicse/)

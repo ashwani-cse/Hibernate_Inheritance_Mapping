@@ -1,4 +1,4 @@
-package com.inheritence.type.demo.mapped_super_class;
+package com.inheritence.type.demo.inheritance_strategies.mapped_super_class;
 
 import jakarta.persistence.Entity;
 

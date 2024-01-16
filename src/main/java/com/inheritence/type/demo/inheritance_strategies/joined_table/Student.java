@@ -1,6 +1,5 @@
-package com.inheritence.type.demo.joined_table;
+package com.inheritence.type.demo.inheritance_strategies.joined_table;
 
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import jakarta.persistence.PrimaryKeyJoinColumn;
 

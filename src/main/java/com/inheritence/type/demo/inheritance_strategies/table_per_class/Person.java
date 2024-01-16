@@ -1,4 +1,4 @@
-package com.inheritence.type.demo.table_per_class;
+package com.inheritence.type.demo.inheritance_strategies.table_per_class;
 
 import jakarta.persistence.*;
 import lombok.Getter;

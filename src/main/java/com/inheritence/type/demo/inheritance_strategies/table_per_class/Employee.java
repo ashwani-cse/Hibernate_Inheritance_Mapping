@@ -1,6 +1,5 @@
-package com.inheritence.type.demo.single_table;
+package com.inheritence.type.demo.inheritance_strategies.table_per_class;
 
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 /**
@@ -8,8 +7,7 @@ import jakarta.persistence.Entity;
  * Created on 13/01/24.
  */
 
-@DiscriminatorValue(value = "employee")
-@Entity
+@Entity(name = "tpc_employee")
 public class Employee extends Person {
 
     private double salary;

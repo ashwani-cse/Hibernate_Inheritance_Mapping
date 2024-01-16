@@ -1,5 +1,7 @@
-package com.inheritence.type.demo.mapped_super_class;
+package com.inheritence.type.demo.inheritance_strategies.mapped_super_class;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
@@ -24,6 +26,7 @@ import lombok.Setter;
 public class Person {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
 }
